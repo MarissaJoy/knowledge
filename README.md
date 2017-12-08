@@ -1,24 +1,42 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Versions
+- ruby 2.3.4
+- rails 5.1.4
 
-Things you may want to cover:
+## System dependencies
+- PostgreSQL 9.6
 
-* Ruby version
+## Configuration
+```
+cp config/database.yml.example config/database.yml
+cp config/application.yml.example config/application.yml
 
-* System dependencies
+```
 
-* Configuration
+## Setup
+```
+bundle install
+```
 
-* Database creation
+### Database initialization
 
-* Database initialization
+```
+bundle exec rails db:setup
+```
 
-* How to run the test suite
+## How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+```
+bundle exec rspec
+```
+
+OR
+
+```
+bundle exec guard # (for developemnt)
+```
 
 * Deployment instructions
 
-* ...
+Configured on heroku -- appname: TBD
