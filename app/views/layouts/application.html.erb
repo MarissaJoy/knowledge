@@ -9,6 +9,11 @@
   </head>
 
   <body>
+    <% flash.each do |msg, val| %>
+     <% if msg.to_s.in? ['error', 'notice'] %>
+       <div class="msg"><%= val %></div>
+     <% end %>
+    <% end %>
     <%= yield %>
   </body>
 </html>
